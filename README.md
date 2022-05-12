@@ -45,13 +45,64 @@ I had trouble getting the wheels to stay on so I would recommend that you use gl
 
 after the wheels are in place you can secure the breadboard to the base of the car. I used folded construction paper so that I could have a flat base for the breadboard. Insert the esp32 and the L293D chip like so: 
 
-![breadboard](breadboard.png)
-wheels are not pictured 
+![breadboard](breadboard.png). 
+
+| <b>Wheels not pictured</b>|
 
 
 
 once that was set up I had to get the wires in the correct place. I used a combination of female-female wires and handcut wires. If you want a cleaner look I would suggest that you cut your wires to size. 
 
+![motor driver pinout](motor_driver_ic.png). 
+
+
+// Motor A connections. 
+
+in1 = pin 26      
+in2 = pin 33      
+enA = pin 25  
+
+
+// Motor B connections. 
+
+ enB = pin 13  
+ in3 = pin 12  
+ in4 = pin 15  
+  
+connected to wires soldered onto motors:    
+motor A   
+out1, out2, 
+
+motor B   
+out3, out4 
+
+the pins that are GND do not all need to be connected to ground 
+I connected 1 pin on the left side and 1 pin on the right side to a common ground 
+
+pin 16 VCC1 is recieving power from the esp32 5V pin 
+and pin 8 VCC2 is recieving power from the external battery's red wire (note that the external battery must share a common ground with the esp32) 
+
+when connecting these wires on the breadboard you should know that ground (the black wire) gets connected to (-) 
+and power (from the esp32 5v pin) is connected to (+) 
+
+the ground and power along the edge of the breadboard does not extend all of the way. I made sure to keep wires that were accessing ground and power on the first half of the breadboard. An alternative would be to bridge both sides of the breadboard by connecting power to power, and ground to ground from the first half to somewhere in the second half. 
+
+![assembled](assembled.png)
+
+the distance sensor    
+has a trig pin that is connected to pin 2.  
+and an echo pin that is connected to pin 32.  
+gnd and vcc should be connected to ground and power 
+
+I taped the battery pack in place and used it as a support for my distance sensor
+
+once everything is in place use your usbc cord to upload the code to the esp32   
+push the reset button on the esp32 to start the server   
+you should see "ESP32" as a wifi network option    
+connect to the network on a phone, laptop, or tablet   
+you will be prompted to put in the password which is "12345678"   
+using that same device open a browser window and head to 192.168.1.1     
+you should see the landing page for Wacky Wagon 
 
 
 
