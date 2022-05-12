@@ -9,7 +9,7 @@
  - battery 
  - 2 DC Brush motors 
  - L293D Driver
- - DC Brush motor wheel attachments
+ - wheel attachments
  - car base 
  - breadboard 
  - female to female wires 
@@ -50,6 +50,7 @@ after the wheels are in place you can secure the breadboard to the base of the c
 | <b>Wheels not pictured</b>|
 
 
+### pins 
 
 once that was set up I had to get the wires in the correct place. I used a combination of female-female wires and handcut wires. If you want a cleaner look I would suggest that you cut your wires to size. 
 
@@ -96,6 +97,7 @@ gnd and vcc should be connected to ground and power
 
 I taped the battery pack in place and used it as a support for my distance sensor
 
+### upload and connect 
 once everything is in place use your usbc cord to upload the code to the esp32   
 push the reset button on the esp32 to start the server   
 you should see "ESP32" as a wifi network option    
